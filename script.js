@@ -111,9 +111,35 @@ function playRound(humanChoice, computerChoice) {
     // ENDIF
 }
 
-// CALL getHumanChoice and save the return value in a constant humanSelection
-const humanSelection = getHumanChoice();
-// CALL getComputerChoice and save the return value in a constant computerSelection
-const computerSelection = getComputerChoice();
-// CALL playRound() with humanSelection and computerSelection as arguments
-playRound(humanSelection, computerSelection);
+function playGame() {
+    // FOR 5 repetitions
+    for (let i = 0; i < 5; i++) {
+        // CALL getHumanChoice and save the return value in a constant humanSelection
+        let humanSelection = getHumanChoice();
+        // CALL getComputerChoice and save the return value in a constant computerSelection
+        let computerSelection = getComputerChoice();
+        // CALL playRound() with humanSelection and computerSelection as arguments
+        playRound(humanSelection, computerSelection);
+    }
+    // ENDFOR
+
+    // IF humanScore > computerScore THEN
+    if (humanScore > computerScore) {
+        // PRINT "You win! You: humanScore, computer: computerScore"
+        console.log("You win! You: " + humanScore + ", computer: " + computerScore);
+    }
+    // ELSE IF humanScore < computerScore THEN
+    else if (humanScore < computerScore) {
+        // PRINT "You lose! You: humanScore, computer: computerScore"
+        console.log("You lose! You: " + humanScore + ", computer: " + computerScore);
+    }
+    // ELSE
+    else {
+        // PRINT "Draw! You: humanScore, computer: computerScore"
+        console.log("Draw! You: " + humanScore + ", computer: " + computerScore);
+    }
+    // ENDIF
+}
+
+// CALL playGame function
+playGame()
