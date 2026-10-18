@@ -1,5 +1,4 @@
 function getComputerChoice() {
-    // pseudo code:
     // INIT a random number between 1 and 3 and save it in randNum
     let randNum = Math.floor(Math.random() * 3) + 1;
     // IF randNum is 1 THEN
@@ -20,11 +19,15 @@ function getComputerChoice() {
 }
 
 function getHumanChoice() {
-    // pseudo code:
     // GET a string from the user via prompt and save it in the humanChoice variable
-    let humanChoice = prompt("ROCK, PAPERS or SCISSORS?");
+    let humanChoice = prompt("ROCK, PAPER or SCISSORS?");
     // SET humanChoice to all caps
     humanChoice = humanChoice.toUpperCase();
     // RETURN humanChoice
     return humanChoice;
 }
+
+// INIT humanScore and assign it 0
+let humanScore = 0;
+// INIT computerScore and assign it 0
+let computerScore = 0;
