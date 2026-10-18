@@ -4,17 +4,27 @@ function getComputerChoice() {
     let randNum = Math.floor(Math.random() * 3) + 1;
     // IF randNum is 1 THEN
     if (randNum === 1) {
-        // return the string "ROCK"
+        // RETURN the string "ROCK"
         return "ROCK";
     }
     // ELSE IF randNum is 2 THEN
     else if (randNum === 2) {
-        // return the string "PAPER"
+        // RETURN the string "PAPER"
         return "PAPER";
     }
     // ELSE
     else {
-        // return the string "SCISSORS"
+        // RETURN the string "SCISSORS"
         return "SCISSORS";
     }
+}
+
+function getHumanChoice() {
+    // pseudo code:
+    // GET a string from the user via prompt and save it in the humanChoice variable
+    let humanChoice = prompt("ROCK, PAPERS or SCISSORS?");
+    // SET humanChoice to all caps
+    humanChoice = humanChoice.toUpperCase();
+    // RETURN humanChoice
+    return humanChoice;
 }
